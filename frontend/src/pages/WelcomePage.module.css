@@ -1,0 +1,114 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--color-canvas-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 64px;
+  border-bottom: 1px solid var(--color-hairline-dark);
+  background-color: var(--color-canvas-dark);
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navBrand {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-on-dark);
+}
+
+.logoutButton {
+  background: transparent;
+  border: 1.5px solid rgba(229,229,229,0.4);
+  border-radius: var(--radius-full);
+  color: var(--color-on-dark);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.324px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.logoutButton:hover {
+  border-color: var(--color-on-dark);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 24px;
+}
+
+.hero {
+  max-width: 640px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.display {
+  font-family: var(--font-family);
+  font-size: 54px;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: -0.1px;
+  color: var(--color-on-dark);
+  margin-bottom: 24px;
+}
+
+.body {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  color: var(--color-body-dark);
+  margin-bottom: 40px;
+}
+
+.ctaButton {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.45px;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 12px 28px;
+  height: 48px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-primary-pressed);
+}
+
+.ctaButton:active {
+  background-color: var(--color-primary-active);
+}

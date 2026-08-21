@@ -1,0 +1,125 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-canvas-dark);
+  padding: 24px;
+}
+
+.card {
+  background-color: var(--color-surface-dark-elevated);
+  border: 1px solid var(--color-hairline-dark);
+  border-radius: var(--radius-md);
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.logoText {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-on-dark);
+  letter-spacing: 0;
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--color-on-dark);
+  line-height: 1.25;
+  letter-spacing: 0.1px;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-body-dark);
+}
+
+.input {
+  background-color: var(--color-canvas-light);
+  color: var(--color-ink);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  height: 48px;
+  width: 100%;
+  outline: none;
+  transition: box-shadow 0.15s;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-warning);
+  line-height: 1.5;
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.45px;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 12px 28px;
+  height: 48px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  margin-top: 8px;
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--color-primary-pressed);
+}
+
+.button:active:not(:disabled) {
+  background-color: var(--color-primary-active);
+}
+
+.button:disabled {
+  background-color: var(--color-surface-soft);
+  color: var(--color-ash-light);
+  cursor: not-allowed;
+}
