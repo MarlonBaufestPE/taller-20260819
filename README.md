@@ -125,3 +125,52 @@ poetry run pytest
 | `SECRET_KEY` | Clave secreta para firmar los JWT | `supersecretkey1234567890abcdef1234567890` |
 
 > ⚠️ En producción, utiliza un valor largo, aleatorio y secreto para `SECRET_KEY`.
+
+---
+
+## Frontend — Cliente Web React
+
+Aplicación web construida con **React** y **Vite** que implementa una página de login y una página de bienvenida protegida, conectada al backend JWT.
+
+### Características
+- **Página de login** (`/login`): formulario con usuario y contraseña. Llama al endpoint `POST /token` del backend, guarda el `access_token` y el `refresh_token` en `sessionStorage`.
+- **Página de bienvenida** (`/welcome`): protegida — redirige a `/login` si no hay sesión activa. Muestra el nombre del usuario y permite cerrar sesión.
+- Diseño basado en el estándar **PlayStation Design System** definido en `DESIGN.md` (colores, tipografía, botones, inputs).
+- Escrito en **React** con **React Router v7** para navegación.
+
+### Requisitos
+
+- [Node.js](https://nodejs.org/) 18+ y npm 9+
+
+### Ejecución local (desarrollo)
+
+1. Primero levanta el backend (ver sección anterior).
+2. En otra terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+La aplicación quedará disponible en `http://localhost:5173`.
+
+> **Nota:** La variable de entorno `VITE_API_BASE_URL` indica la URL base del backend (por defecto `http://localhost:8000`). Crea un archivo `frontend/.env` copiando `frontend/.env.example` y ajusta si es necesario.
+
+### Build para producción
+
+```bash
+cd frontend
+npm run build
+```
+
+Los artefactos generados se guardan en `frontend/dist/`.
+
+### Credenciales por defecto
+
+| Campo | Valor |
+|-------|-------|
+| Usuario | `admin` |
+| Contraseña | `admin123` |
+
+> Las credenciales se configuran en el backend mediante las variables de entorno `VALID_USERNAME` y `VALID_PASSWORD`.
