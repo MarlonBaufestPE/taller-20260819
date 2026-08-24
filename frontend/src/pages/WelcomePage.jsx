@@ -1,6 +1,34 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './WelcomePage.module.css'
 
+const aiCertifications = [
+  {
+    name: 'Machine Learning Operations Engineer Associate',
+    description:
+      'Reemplaza a Azure Data Scientist Associate. Valida habilidades para operacionalizar, monitorear y mantener modelos de machine learning en producción.',
+  },
+  {
+    name: 'Azure AI Apps and Agents Developer Associate',
+    description:
+      'Reemplaza a Azure AI Engineer Associate. Certifica el desarrollo de aplicaciones y agentes de IA generativa sobre Azure AI Foundry.',
+  },
+  {
+    name: 'Agentic AI Business Solutions Architect',
+    description:
+      'Nueva certificación experta que valida el diseño de soluciones de negocio impulsadas por agentes de IA sobre Dynamics 365 y Power Platform.',
+  },
+  {
+    name: 'Azure Databricks Data Engineer Associate',
+    description:
+      'Nueva certificación que valida habilidades de ingeniería de datos e IA a gran escala utilizando Azure Databricks.',
+  },
+  {
+    name: 'SQL AI Developer Associate',
+    description:
+      'Nueva certificación enfocada en construir soluciones inteligentes que integran IA con bases de datos SQL.',
+  },
+]
+
 export default function WelcomePage() {
   const navigate = useNavigate()
   const username = sessionStorage.getItem('username') || 'Usuario'
@@ -38,6 +66,19 @@ export default function WelcomePage() {
             Cerrar sesión
           </button>
         </div>
+
+        <section className={styles.certSection}>
+          <p className={styles.eyebrow}>Novedades 2026</p>
+          <h2 className={styles.certHeading}>Nuevas certificaciones de Microsoft en Inteligencia Artificial</h2>
+          <div className={styles.certGrid}>
+            {aiCertifications.map(cert => (
+              <article className={styles.certCard} key={cert.name}>
+                <h3 className={styles.certCardTitle}>{cert.name}</h3>
+                <p className={styles.certCardBody}>{cert.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   )

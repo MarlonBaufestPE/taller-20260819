@@ -49,6 +49,7 @@
 .main {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 96px 24px;
@@ -111,4 +112,54 @@
 
 .ctaButton:active {
   background-color: var(--color-primary-active);
+}
+
+.certSection {
+  max-width: 1024px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.certHeading {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-on-dark);
+  margin-bottom: 40px;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  text-align: left;
+}
+
+.certCard {
+  background-color: var(--color-canvas-dark);
+  border: 1px solid var(--color-hairline-dark);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.15s;
+}
+
+.certCard:hover {
+  border-color: var(--color-primary);
+}
+
+.certCardTitle {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-on-dark);
+  margin-bottom: 12px;
+}
+
+.certCardBody {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-body-dark);
 }
